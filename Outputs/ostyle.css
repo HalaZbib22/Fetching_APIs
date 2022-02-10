@@ -67,6 +67,10 @@ h1:last-of-type {
    overflow-x: scroll;
 }
 
+.box {
+  flex-wrap: wrap;
+}
+
 @media (max-width: 450px) {
   .box {
     height: 200px;
@@ -168,6 +172,3 @@ button {
 }
 /* End of Fill Button  */
 
-.hidden {
-  display: none;
-}

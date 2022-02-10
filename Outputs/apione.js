@@ -11,7 +11,7 @@ window.onload = function () {
   }
     if (x != null && y != null) {
       MathButton.classList.add("hidden");
-      fetchAPI1 = fetch(`http://localhost/SEF/FourAPIs/API1.php/?x=${x}&y=${y}`)
+      fetchAPI1 = fetch(`http://localhost/SEF/API1.php/?x=${x}&y=${y}`)
         .then((response) => response.json())
         // .then((data) => console.log(data))
         .then((data) => {
