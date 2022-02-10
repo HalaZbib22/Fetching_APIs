@@ -63,9 +63,6 @@ h1:last-of-type {
   padding: 30px;
   margin: 20px;
 }
-.pink > p {
-   overflow-x: scroll;
-}
 
 @media (max-width: 450px) {
   .box {
