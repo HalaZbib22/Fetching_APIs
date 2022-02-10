@@ -5,7 +5,7 @@ window.onload = function () {
     let string = prompt("Please enter a string to remove white spaces from...");
     if (string != null) {
       fetchAPI3 = fetch(
-        `http://localhost/SEF/API3.php/?string=${string}`
+        `/SEF/API3.php?string=${string}`
       )
         .then((response) => response.json())
         // .then((data) => console.log(data))

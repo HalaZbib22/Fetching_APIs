@@ -5,7 +5,7 @@ window.onload = function () {
     let string = prompt("Please enter a string to check...", "dad");
     if (string != null) {
       fetchAPI2 = fetch(
-        `http://localhost/SEF/API2.php/?string=${string}`
+        `/SEF/API2.php?string=${string}`
       )
         .then((response) => response.json())
         // .then((data) => console.log(data))

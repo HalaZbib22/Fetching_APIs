@@ -67,10 +67,6 @@ h1:last-of-type {
    overflow-x: scroll;
 }
 
-.box {
-  flex-wrap: wrap;
-}
-
 @media (max-width: 450px) {
   .box {
     height: 200px;
@@ -114,7 +110,9 @@ h2 {
     top: 150px;
   }
   .box {
-    width: 20%;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: fit-content;
   }
   .header p {
     width: 30%;
@@ -124,8 +122,9 @@ h2 {
 /* BUTTON STYLING */
 
 button {
-  margin: 50px;
   font-family: inherit;
+  text-align: center;
+  flex-wrap: wrap;
 }
 /* End of Page styling */
 
