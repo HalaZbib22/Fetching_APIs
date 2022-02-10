@@ -3,12 +3,12 @@
 function PasswordCheck($string){ 
     if ( (strlen($string) >= 8 ) && ( preg_match('/[A-Za-z]/', $string) ) && ( preg_match('/[0-9]/', $string)) ){ 
         $hashed = hash('sha256', $string);
-        $array = ["password" => $hashed];
+        $array = ["password" => $hashed, "boolean" => "True"];
         echo json_encode($array);
     }
     else{
-        $message = "TOO WEAK!";
-        echo ($message);
+        $array = ["boolean" => "False"];
+        echo json_encode($array);
     }
 } 
 

@@ -2,7 +2,7 @@ window.onload = function () {
   HashedPassButton = document.getElementById("HPB");
 
   HashedPassButton.addEventListener("click", function () {
-    let string = prompt("Please enter a string to remove white spaces from...");
+    let string = prompt("Please enter a password...");
     if (string != null) {
       fetchAPI4 = fetch(
         `http://localhost/SEF/FourAPIs/API4.php/?string=${string}`
@@ -10,6 +10,7 @@ window.onload = function () {
         .then((response) => response.json())
         // .then((data) => console.log(data))
         .then((data) => {
+          if(data.boolean == "True"){
           document.getElementById("content").innerHTML = "";
           let answer = document.createElement("h2");
           answer.textContent = "Hashed Password:";
@@ -17,6 +18,10 @@ window.onload = function () {
           let p = document.createElement("p");
           p.textContent = data.password;
           document.getElementById("content").appendChild(p);
+          }
+          else{
+            alert("PASSWORD TOO WEAK!!");
+          }
         });
     }
   });

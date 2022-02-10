@@ -2,8 +2,13 @@ window.onload = function () {
   MathButton = document.getElementById("MB");
 
   MathButton.addEventListener("click", function () {
-    let x = prompt("Please enter a number");
-    let y = prompt("Please enter a number");
+    let x = prompt("Please enter a number",10);
+    let y = prompt("Please enter a number",6);
+    while (!/^[0-9]+$/.test(x) || !/^[0-9]+$/.test(y) ) {
+      alert("You did not enter a number!");
+      x = prompt("Please enter a number");
+      y = prompt("Please enter a number");
+  }
     if (x != null && y != null) {
       MathButton.classList.add("hidden");
       fetchAPI1 = fetch(`http://localhost/SEF/FourAPIs/API1.php/?x=${x}&y=${y}`)
