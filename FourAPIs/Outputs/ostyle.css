@@ -55,6 +55,7 @@ h1:last-of-type {
 
 .box p {
   color: var(--grayishBlue);
+  overflow-x: scroll;
 }
 
 .box {
