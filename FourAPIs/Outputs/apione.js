@@ -2,12 +2,12 @@ window.onload = function () {
   MathButton = document.getElementById("MB");
 
   MathButton.addEventListener("click", function () {
-    let x = prompt("Please enter a number",10);
-    let y = prompt("Please enter a number",6);
+    let x = prompt("Please enter a number, x= ",10);
+    let y = prompt("Please enter a number, y= ",6);
     while (!/^[0-9]+$/.test(x) || !/^[0-9]+$/.test(y) ) {
       alert("You did not enter a number!");
-      x = prompt("Please enter a number");
-      y = prompt("Please enter a number");
+      x = prompt("Please enter a number, x= ",10);
+      y = prompt("Please enter a number, y= ",6);
   }
     if (x != null && y != null) {
       MathButton.classList.add("hidden");
